@@ -1,14 +1,14 @@
 electron-edge-sample
 =====================
 
-Getting Started with electron edge
+Getting Started with electron-edge
 
 This is an attempt to get a electron app up and running with .net core. 
-I had to use older preview version of dotnet core to get everything up and running.
-Need to upgrade the sample when newer versions are supported.
+I had to use older preview version of dotnet core `1.0.0-preview2-003121` to get everything up and running.
+Need to upgrade the sample if newer versions are supported.
 
 ## Running The sample
-
+Please note that this sample run on dotnet core `1.0.0-preview2-003121`. You may try pointing to different versions of core clr in `global.json` file.
 ```
 > npm install
 > cd core_modules\helloworld
@@ -46,7 +46,7 @@ namespace HelloWorld
 }
 ```
 
-Reference the startup in the js file
+#### Reference the `startup` class in the js file
 
 ```javascript
 var helloWorld = edge.func({
