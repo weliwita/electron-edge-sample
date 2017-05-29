@@ -11,7 +11,6 @@ Need to upgrade the sample when newer versions are supported.
 
 ```
 > npm install
-> set EDGE_USE_CORECLR=1
 > cd core_modules\helloworld
 > dotnet restore
 > dotnet build
@@ -19,13 +18,19 @@ Need to upgrade the sample when newer versions are supported.
 > npm run start
 ```
 
+When run, the electron app spit out a console log with the message from core dll
+```
+Hello from dot net core
+```
 
-### scaffalding and building the core project
+
+#### scaffalding the core dll project
 ```
 > cd core_modules\helloworld 
 > dotnet new -t Lib
 ```
-Added nessasary code for startup class
+
+Add nessasary code for startup class
 
 ```c#
 namespace HelloWorld
@@ -41,8 +46,16 @@ namespace HelloWorld
 }
 ```
 
-### common issues
-could not load system runtime. 
+Reference the startup in the js file
+
+```javascript
+var helloWorld = edge.func({
+  assemblyFile: path.join(__dirname, 'core_modules\\helloworld\\bin\\Debug\\netstandard1.6\\helloworld.dll'),
+  typeName: 'HelloWorld.Startup'
+});
+```
+
+#### common issues you may encounter while running this sample
 ```
 Could not load file or assembly 'System.Runtime, Version=4.1.0.0, ...'
 ```

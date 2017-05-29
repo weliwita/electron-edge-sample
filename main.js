@@ -23,9 +23,7 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
-
-  console.log("hello ele")
-
+  
 var helloWorld = edge.func({
   assemblyFile: path.join(__dirname, 'core_modules\\helloworld\\bin\\Debug\\netstandard1.6\\helloworld.dll'),
   typeName: 'HelloWorld.Startup'
