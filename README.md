@@ -63,3 +63,28 @@ You have fall back to .net framework native clr mode. Switch to CoreCLR mode.
 ```
 >set EDGE_USE_CORECLR=1
 ```
+
+```
+A JavaScript error occurred in the main process
+Uncaught Exception:
+Error: The module '/home/rasika/Work/github/electron-edge-sample/node_modules/electron-edge/build/Release/edge_coreclr.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 46. This version of Node.js requires
+NODE_MODULE_VERSION 53. Please try re-compiling or re-installing
+the module (for instance, using `npm rebuild` or`npm install`).
+    at process.module.(anonymous function) [as dlopen] (ELECTRON_ASAR.js:173:20)
+    at Object.Module._extensions..node (module.js:598:18)
+    at Object.module.(anonymous function) [as .node] (ELECTRON_ASAR.js:173:20)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/home/rasika/Work/github/electron-edge-sample/node_modules/electron-edge/lib/edge.js:51:10)
+    at Object.<anonymous> (/home/rasika/Work/github/electron-edge-sample/node_modules/electron-edge/lib/edge.js:172:3)
+```
+
+use elecron rebuild to build the package.
+`npm install --save-dev electron-rebuild`
+and run 
+`./node_modules/.bin/electron-rebuild`
