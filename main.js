@@ -24,15 +24,24 @@ function createWindow () {
     slashes: true
   }))
   
-var helloWorld = edge.func({
+// var helloWorld = edge.func({
+//   assemblyFile: path.join(__dirname, 'core_modules','helloworld','bin','Debug','netstandard1.6','helloworld.dll'),
+//   typeName: 'HelloWorld.Startup'
+// });
+
+// helloWorld('JavaScript', function (error, result) {
+//     if (error) throw error;
+//     console.log(result);
+// });
+var createPerson = edge.func({
   assemblyFile: path.join(__dirname, 'core_modules','helloworld','bin','Debug','netstandard1.6','helloworld.dll'),
   typeName: 'HelloWorld.Startup'
 });
 
-helloWorld('JavaScript', function (error, result) {
-    if (error) throw error;
-    console.log(result);
-});
+var person = createPerson(120, true);
+console.log(person.getSalary(null, true));
+console.log(person.giveRaise(20, true));
+console.log(person.getSalary(null, true));
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
