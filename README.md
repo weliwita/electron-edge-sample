@@ -63,3 +63,12 @@ You have fall back to .net framework native clr mode. Switch to CoreCLR mode.
 ```
 >set EDGE_USE_CORECLR=1
 ```
+
+### Debug
+```
+> set EDGE_DEBUG=1
+```
+
+### Referencing dlls
+set EdgeAppRoot
+dlls shouldbe loaded from the path

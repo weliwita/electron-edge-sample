@@ -3,14 +3,11 @@
   "buildOptions": {
     "debugType": "portable"
   },
-  "dependencies": {
-    "helloworldref":"1.0.0-*"
-  },
+  "dependencies": {},
   "frameworks": {
     "netstandard1.6": {
       "dependencies": {
-        "NETStandard.Library": "1.6.0",
-        "Edge.js": "7.10.1"
+        "NETStandard.Library": "1.6.0"
       }
     }
   }

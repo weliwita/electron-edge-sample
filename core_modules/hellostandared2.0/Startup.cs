@@ -5,9 +5,7 @@
     {
         public async Task<object> Invoke(object input)
         {
-            Helper h = new Helper();
-
-            return Helper.GetHelp();
+            return "Hello from dot net core";
         }
     }
 }
