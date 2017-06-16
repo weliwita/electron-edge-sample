@@ -50,7 +50,7 @@ namespace HelloWorld
 
 ```javascript
 var helloWorld = edge.func({
-  assemblyFile: path.join(__dirname, 'core_modules\\helloworld\\bin\\Debug\\netstandard1.6\\helloworld.dll'),
+  assemblyFile: path.join(__dirname, 'core_modules\\helloworld\\bin\\Debug\\netstandard2.0\\helloworld.dll'),
   typeName: 'HelloWorld.Startup'
 });
 ```
@@ -63,3 +63,10 @@ You have fall back to .net framework native clr mode. Switch to CoreCLR mode.
 ```
 >set EDGE_USE_CORECLR=1
 ```
+
+>set EDGE_APP_ROOT=D:\Projects\GitHub\electron-edge-sample\core_modules\helloworld\bin\Debug\netstandard2.0
+
+>set EDGE_DEBUG=1
+
+
+>dotnet restore -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json -s D:\r\edge\src\double\Edge.js\bin\Release -s https://api.nuget.org/v3/index.json -v Debug

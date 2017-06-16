@@ -25,7 +25,7 @@ function createWindow () {
   }))
   
 var helloWorld = edge.func({
-  assemblyFile: path.join(__dirname, 'core_modules\\helloworld\\bin\\Debug\\netcoreapp2.0\\helloworld.dll'),
+  assemblyFile: path.join(__dirname, 'core_modules\\helloworld\\bin\\Debug\\netstandard2.0\\helloworld.dll'),
   typeName: 'HelloWorld.Startup'
 });
 
