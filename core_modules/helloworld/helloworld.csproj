@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DebugType>portable</DebugType>
+    <AssemblyName>helloworld</AssemblyName>
+    <PackageId>helloworld</PackageId>
+    <NetStandardImplicitPackageVersion>2.1.0-preview1-25415-01</NetStandardImplicitPackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Edge.js" Version="7.10.1" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.5.0-preview2-25319-04" />
+  </ItemGroup>
+
+</Project>
