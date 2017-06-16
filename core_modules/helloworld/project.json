@@ -10,10 +10,10 @@
       "dependencies": {
         "NETStandard.Library": {
                     "type": "platform",
-                    "version": "2.1.0-preview1-25414-02"
+                    "version": "2.1.0-preview1-25415-01"
                 },
-        "Edge.js":"7.10.1"
-        
+        "Edge.js":"7.10.1",
+        "System.Security.Cryptography.Xml":"4.5.0-preview2-25319-04"
       }
     }
   }
